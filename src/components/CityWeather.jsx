@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-// const key = '439b27d456e30f87ad15fc5e859be8ee';
-const key='cbdf70468e272cb3b1057cf814bd4ab2'
+const key = '439b27d456e30f87ad15fc5e859be8ee';
+// const key='cbdf70468e272cb3b1057cf814bd4ab2'
 //La key non sepre funziona, attiva la seconda se la priama da errore
 
 const CityWeather = ({ city }) => {  
