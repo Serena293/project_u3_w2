@@ -1,15 +1,16 @@
-import MyFooter from './components/MyFooter';
-import MyNavbar from './components/MyNavbar'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import CityWeather from "./components/CityWeather";
+import MyFooter from "./components/MyFooter";
+import MyNavbar from "./components/MyNavbar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-  
-    <div className="App d-flex flex-column vh-100"> 
-    <MyNavbar />
-    <main className='flex-grow-1'></main>
-    <MyFooter/>
+    <div className="App d-flex flex-column vh-100">
+      <MyNavbar />
+      <main className="flex-grow-1">
+        <CityWeather></CityWeather>
+      </main>
+      <MyFooter />
     </div>
   );
 }
