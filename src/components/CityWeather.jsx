@@ -32,8 +32,8 @@ const CityWeather = ({ city }) => {
   }
 
   return (
-    <div className="container my-5">
-      <h1 className="text-center mb-4">Weather Information</h1>
+    <div className="container my-5 bg-white opacity-75 rounded shadow ">
+      <h1 className="text-center mb-4">Today Weather</h1>
       {weather ? (
         <div className="row">
           

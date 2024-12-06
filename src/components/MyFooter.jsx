@@ -8,7 +8,7 @@ const MyFooter = () => {
         <footer>
             <Row>
                 <Col xs={12}>
-                    <div className=' bg-dark text-white text-center py-2'>
+                    <div className=' bg-info text-center py-2'>
                         <Envelope className='me-3'></Envelope>
                             <Github className='me-3'></Github>
                       <p className='m-3'>Copyright © {year}</p>

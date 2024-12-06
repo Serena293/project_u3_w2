@@ -2,20 +2,27 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CityWeather from "./components/CityWeather";
 import MyFooter from "./components/MyFooter";
 import MyNavbar from "./components/MyNavbar";
+
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   return (
     <Router>
-      <div className="App d-flex flex-column vh-100">
+      <div className="App d-flex flex-column vh-100 bg-info">
         <MyNavbar />
-        <main className="flex-grow-1">
+        <main className="flex-grow-1 m-3"   style={{
+    backgroundImage: `url(${process.env.PUBLIC_URL}/weather-bg.jpg)`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
+  >
           <Routes>
             <Route path="/" element={<CityWeather city="Afragola" />} />
             <Route path="/London" element={<CityWeather city="London" />} />
             <Route path="/this-year" element={  <div>
                   <h2>This Year Wrapped</h2>
-                  <div>
+                  <div >
                     <CityWeather city="Auckland" />
                     <CityWeather city="Ho Chi Minh" />
                     <CityWeather city="Kuala Lumpur" />
