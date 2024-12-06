@@ -18,7 +18,7 @@ const CityWeather = ({ city }) => {
           throw new Error(data.message);
         }
         
-        setWeather(data); // Aggiorna stato con 
+        setWeather(data); // Aggiorna stato 
       } catch (error) {
         setError(error.message); 
       }
@@ -39,7 +39,7 @@ const CityWeather = ({ city }) => {
           
           <div className="col-6">
             <h2>{weather.name}</h2> 
-            <p className="display-4">{weather.main.temp}°C</p> 
+            <p className="display-4">{weather.main.temp.toFixed(0)}°C</p> 
             <img 
               className="img-fluid my-3" 
               src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} 

@@ -1,14 +1,16 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { House } from 'react-bootstrap-icons'; // House icon
+import logo from '../assets/www.jpg';
+import { House } from 'react-bootstrap-icons'; 
 import { Link } from 'react-router-dom';
+
 
 function MyNavbar() {
   return (
     <Navbar expand="lg" className="bg-dark navbar-dark">
       <Container fluid>
-        <Navbar.Brand href="#home">World Wide Weather</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={logo} alt='logo' style={{ height: '40px', marginRight: '10px', borderRadius: '50%' }}></img>World Wide Weather</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto d-flex justify-content-between" >
