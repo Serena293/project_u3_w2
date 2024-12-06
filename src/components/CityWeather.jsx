@@ -2,15 +2,15 @@ import { useEffect, useState } from 'react';
 
 const key = '439b27d456e30f87ad15fc5e859be8ee';
 
-const CityWeather = () => {
-  // Stato per memorizzare i dati del meteo
+const CityWeather = ({ city }) => {  
+ 
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Afragola&appid=${key}&units=metric`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`);
         const data = await response.json();
         
         //se la città non viene trovata
@@ -25,7 +25,8 @@ const CityWeather = () => {
     };
 
     fetchWeather();
-  }, []); // array vuoto per non far ripartire tutto
+  }, [city]); 
+  
   if (error) {
     return <p className="text-danger">Error: {error}</p>;
   }
@@ -47,7 +48,6 @@ const CityWeather = () => {
             <p>{weather.weather[0].description}</p> 
           </div>
 
-          {/* Seconda colonna: informazioni aggiuntive */}
           <div className="col-6">
             <h3>Additional Details</h3>
             <p><strong>Humidity:</strong> {weather.main.humidity}%</p> 
